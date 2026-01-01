@@ -1,0 +1,52 @@
+# =====================
+# Frontend (React / Vite)
+# =====================
+node_modules/
+dist/
+dist-ssr/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =====================
+# Environment
+# =====================
+.env
+.env.*
+
+# =====================
+# .NET / Visual Studio
+# =====================
+.vs/
+bin/
+obj/
+TestResults/
+*.user
+*.suo
+*.cache
+*.log
+*.tmp
+*.bak
+*.Backup.tmp
+
+# =====================
+# ASP.NET Core
+# =====================
+appsettings.Development.json
+
+# =====================
+# SQLite
+# =====================
+*.db
+*.db-shm
+*.db-wal
+
+# =====================
+# Editors / OS
+# =====================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
