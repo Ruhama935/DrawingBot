@@ -33,7 +33,7 @@ namespace server.Controllers
             );
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("by-id/{id:guid}")]
         public async Task<IActionResult> GetById(Guid id)
         {
             var drawing = await _drawingService.GetDrawingByIdAsync(id);

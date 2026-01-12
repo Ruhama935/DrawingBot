@@ -42,7 +42,7 @@ export async function saveDrawing(
 }
 
 export async function loadDrawing(id: string): Promise<{commands: DrawCommand[], prompt: string}> {
-  const res = await fetch(`${BASE_URL}/${id}`)
+  const res = await fetch(`${BASE_URL}/by-id/${id}`)
 
   if (!res.ok) throw new Error('Load failed')
 
