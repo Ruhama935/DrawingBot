@@ -51,6 +51,7 @@ builder.Services.AddHttpClient<IAiService, OpenRouterAiService>();
 builder.Services.AddHttpClient();
 builder.Services.AddScoped<IDrawingRepository, DrawingRepository>();
 builder.Services.AddScoped<IDrawingService, DrawingService>();
+
 builder.Services.AddDbContext<DrawingDbContext>(options =>
     options.UseSqlite("Data Source=drawingbot.db"));
 
@@ -62,10 +63,6 @@ using (var scope = app.Services.CreateScope())
     var db = scope.ServiceProvider.GetRequiredService<DrawingDbContext>();
     db.Database.EnsureCreated();
 }
-
-Console.WriteLine(
-    $"DB Path: {Path.GetFullPath("drawingbot.db")}"
-);
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

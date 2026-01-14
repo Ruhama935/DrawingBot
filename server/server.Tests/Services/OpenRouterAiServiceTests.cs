@@ -106,7 +106,7 @@ namespace server.Tests.Services
             // Act & Assert
             var exception = await Assert.ThrowsAsync<Exception>(() => service.AskAsync("test"));
             Assert.Contains("AI service error", exception.Message);
-            Assert.Contains("500", exception.Message);
+            Assert.Contains("InternalServerError", exception.Message);
         }
 
         [Fact]

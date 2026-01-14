@@ -14,22 +14,15 @@ export default function DrawingCanvas() {
         const ctx = canvas.getContext('2d')
         if (!ctx) return
 
-        ctx.clearRect(0, 0, canvas.width, canvas.height)
-
         renderCommands(ctx, commands)
     }, [commands])
 
     return (
         <div style={{ padding: 16 }}>
-            <canvas
+            <canvas className="drawing-canvas"
                 ref={canvasRef}
                 width={900}
-                height={460}
-                style={{
-                    background: 'white',
-                    borderRadius: 8,
-                    boxShadow: '0 4px 12px rgba(219, 23, 23, 0.08)'
-                }} />
+                height={460} />
         </div>
     )
-}
+}   

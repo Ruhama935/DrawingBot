@@ -40,7 +40,7 @@ namespace server.Services
                     throw new Exception("AI response is not an array");
                 }
             }
-            catch
+            catch (JsonException)
             {
                 throw new Exception("AI returned invalid JSON format");
             }
@@ -90,7 +90,8 @@ namespace server.Services
             {
                 return new GenerateDrawingResponse
                 {
-                    Commands = JsonSerializer.Deserialize<object>(drawing.CommandsJson)!
+                    Commands = JsonSerializer.Deserialize<object>(drawing.CommandsJson)!,
+                    Prompt = drawing.PromptText
                 };
             }
             catch (JsonException)

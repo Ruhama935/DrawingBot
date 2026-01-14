@@ -328,3 +328,9 @@ button:disabled {
     color: #6b7280; /* אפור כהה, דומה לגווני placeholder */
     font-style: italic;
 }
+
+.drawing-canvas {
+    background: white;
+    border-radius: 8;
+    box-shadow: 0 4px 12px rgba(219, 23, 23, 0.08)
+}
